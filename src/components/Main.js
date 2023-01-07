@@ -67,6 +67,24 @@ const Main = (props) => {
                             <a>5 comments </a>
                         </li>
                     </SocialCount>
+                    <SocialActions>
+                    <button>
+                        <img src="/images/like.png" alt="" />
+                        <span>Like</span>
+                    </button>
+                    <button>
+                        <img src="/images/comments.png" alt="" />
+                        <span>Comments</span>
+                    </button>
+                    <button>
+                        <img src="/images/share.png" alt="" />
+                        <span>Share</span>
+                    </button>
+                    <button>
+                        <img src="/images/send.png" alt="" />
+                        <span>Send</span>
+                    </button>
+                    </SocialActions>
                 </Article>
             </div>
         </Container>
@@ -243,6 +261,28 @@ const SocialCount = styled.ul`
         font-size : 12px;
         button {
             display : flex;
+        }
+    }
+`;
+
+const SocialActions = styled.div`
+    align-items : center;
+    display : flex;
+    justify-content : flex-start;
+    margin : 0;
+    min-height : 48px;
+    padding : 4px 8px;
+    button {
+        display : inline-flex;
+        align-items : center;
+        padding : 8px;
+        color: #0a66c2;
+
+        @media (min-width : 768px)
+        {
+            span {
+                margin-left : 8px;
+            }
         }
     }
 `;
